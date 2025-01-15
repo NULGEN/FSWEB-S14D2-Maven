@@ -38,4 +38,15 @@ public class Bed {
     public  void  make(){
         System.out.println("The bed is being made.");
     }
+
+    @Override
+    public String toString() {
+        return "Bed{" +
+                "style='" + style + '\'' +
+                ", pillows=" + pillows +
+                ", height=" + height +
+                ", sheets=" + sheets +
+                ", quilts=" + quilts +
+                '}';
+    }
 }

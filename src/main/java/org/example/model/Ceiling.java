@@ -19,4 +19,12 @@ public class Ceiling {
     public void create(){
         System.out.println("Ceiling has been built.");
     }
+
+    @Override
+    public String toString() {
+        return "Ceiling{" +
+                "height=" + height +
+                ", color=" + color +
+                '}';
+    }
 }

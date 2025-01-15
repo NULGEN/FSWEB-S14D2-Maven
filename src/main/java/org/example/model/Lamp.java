@@ -29,6 +29,12 @@ private int globRating;
         System.out.println("Lamp is being turned on");
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Lamp{" +
+                "style=" + style +
+                ", battery=" + battery +
+                ", globRating=" + globRating +
+                '}';
+    }
 }

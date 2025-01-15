@@ -7,14 +7,19 @@ import org.example.model.enums.PaintColor;
 public class Main {
     public static void main(String[] args) {
 
-//        Bedroom bedroom = new Bedroom("salon",
-//                new Wall("doğu"), new Wall("kuzey"),new Wall("batı"), new Wall("güney"),
-//                new Ceiling(5, PaintColor.WHITE),
-//                new Bed("soft",2,3,1,4),
-//                new Lamp(LampType.LAVA,true,80),
-//                new Wardrobe(3,2,20),
-//                new Carpet(2,10, PaintColor.RED));
-//
-//        System.out.println(bedroom.toString());
+        Lamp lamp = new Lamp(LampType.NEON,true,90);
+        Ceiling ceiling= new Ceiling(3, PaintColor.WHITE);
+        Bed bed = new Bed("double",2,2,2,2);
+        Wall eastWall = new Wall("doğu");
+        Wall westWall = new Wall("batı");
+        Wall northWall = new Wall("kuzey");
+        Wall southWall = new Wall("güney");
+        Wall[] walls = new Wall[] {northWall,eastWall,southWall,westWall};
+
+        Bedroom bedroom = new Bedroom(northWall,southWall,eastWall,westWall,ceiling,lamp,new Carpet(1,3,PaintColor.RED),
+                            "bedroom1",bed, new Wardrobe(1,2,100));
+
+        bedroom.createBedRoom();
+
     }
 }
